@@ -1,0 +1,546 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  background: linear-gradient(135deg, #eef2ff, #fdf2f8, #ecfeff);
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.login-box {
+  width: 100%;
+  max-width: 420px;
+  padding: 42px;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 22px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.login-box h1 {
+  margin: 0;
+  font-size: 38px;
+  color: #4f46e5;
+  letter-spacing: 0.5px;
+}
+
+.login-box h2 {
+  margin: 10px 0 28px;
+  color: #374151;
+  font-size: 24px;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.login-box input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.login-box button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(99, 102, 241, 0.3);
+}
+
+.login-box p {
+  margin-top: 18px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  min-height: 72px;
+  background: linear-gradient(90deg, #312e81, #4f46e5, #7c3aed);
+  color: white;
+  padding: 14px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.nav-links button {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: #4338ca;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-links button:hover {
+  background: #eef2ff;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+  max-width: 1250px;
+  margin: auto;
+  padding: 42px 28px;
+}
+
+.dashboard h1 {
+  margin-top: 0;
+  font-size: 34px;
+  background: linear-gradient(90deg, #4338ca, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dashboard > p {
+  font-size: 16px;
+  color: #4b5563;
+}
+
+/* =========================
+   DASHBOARD CARDS
+========================= */
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.dashboard-cards > div {
+  position: relative;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 25px;
+  border-radius: 16px;
+  border-top: 5px solid #6366f1;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-cards > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.13);
+}
+
+.dashboard-cards > div:nth-child(2) {
+  border-top-color: #ec4899;
+}
+
+.dashboard-cards > div:nth-child(3) {
+  border-top-color: #06b6d4;
+}
+
+.dashboard-cards > div:nth-child(4) {
+  border-top-color: #f59e0b;
+}
+
+.dashboard-cards > div:nth-child(5) {
+  border-top-color: #10b981;
+}
+
+.dashboard-cards h2 {
+  margin-top: 0;
+  color: #312e81;
+}
+
+.dashboard-cards p {
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* =========================
+   CLICKABLE DASHBOARD CARDS
+========================= */
+
+.dashboard-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dashboard-card-link > div {
+  cursor: pointer;
+  height: 100%;
+}
+
+/* =========================
+   EVENT CARDS
+========================= */
+
+.event-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.event-type {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #ede9fe;
+  color: #6d28d9;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.event-details p {
+  margin: 9px 0;
+}
+
+.event-card button {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* =========================
+   TICKET CARDS
+========================= */
+
+.ticket-card {
+  position: relative;
+}
+
+.ticket-card::before {
+  content: "TICKET";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+.venue-form {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #6366f1;
+  margin-top: 25px;
+}
+
+.venue-form h2 {
+  color: #312e81;
+  margin-top: 0;
+}
+
+.venue-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.venue-form input,
+.venue-form select,
+.venue-form textarea,
+.booking-box input,
+.booking-box select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 9px;
+  font-size: 15px;
+  outline: none;
+  background: #fafafa;
+  transition: 0.2s;
+}
+
+.venue-form input:focus,
+.venue-form select:focus,
+.venue-form textarea:focus,
+.booking-box input:focus,
+.booking-box select:focus {
+  border-color: #6366f1;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.venue-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.venue-form button,
+.dashboard-cards button,
+.booking-box button {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 8px;
+  margin-top: 5px;
+  transition: 0.2s;
+}
+
+.venue-form button:hover,
+.dashboard-cards button:hover,
+.booking-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(79, 70, 229, 0.25);
+}
+
+/* Delete buttons */
+
+.dashboard-cards button:last-child {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.dashboard-cards button:last-child:hover {
+  box-shadow: 0 8px 16px rgba(220, 38, 38, 0.25);
+}
+
+/* =========================
+   BOOKING
+========================= */
+
+.booking-box {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.97);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #10b981;
+  margin-top: 25px;
+}
+
+.booking-box h2 {
+  color: #047857;
+  margin-top: 0;
+}
+
+.booking-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.booking-box label {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+
+.status-confirmed {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #dcfce7;
+  color: #15803d;
+  font-weight: 700;
+}
+
+.status-cancelled {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.status-available {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #dcfce7;
+  color: #15803d;
+  font-weight: 700;
+}
+
+.status-booked {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+/* =========================
+   MESSAGE / TEXT
+========================= */
+
+.dashboard > p,
+.venue-form > p {
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.login-box p {
+  color: #374151;
+}
+
+/* =========================
+   MOBILE / TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 15px 18px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .dashboard {
+    padding: 30px 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-box {
+    padding: 30px 22px;
+  }
+
+  .login-box h1 {
+    font-size: 32px;
+  }
+
+  .dashboard h1 {
+    font-size: 28px;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .venue-form,
+  .booking-box {
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .login-container {
+    padding: 12px;
+  }
+
+  .login-box {
+    padding: 24px 18px;
+  }
+
+  .dashboard {
+    padding: 22px 12px;
+  }
+
+  .dashboard-cards > div {
+    padding: 20px;
+  }
+}
